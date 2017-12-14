@@ -27,13 +27,13 @@ temp_sec = theta(2) - alpha*(1/m)*sum((hypot-y).*X(:,2));
 theta = [temp_first;temp_sec];    
 
 fprintf('Current theta: %f\n',theta);
-fprintf('Current Cost func: %f\n',J);
-
 
     % ============================================================
 
     % Save the cost J in every iteration    
-    J_history(iter) = computeCost(X, y, theta);
+J_history(iter) = computeCost(X, y, theta);
+    
+fprintf('Current Cost func: %f\n',J_history(iter));
 
 end
 
